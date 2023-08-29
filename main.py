@@ -37,3 +37,19 @@ for element in elements_to_remove:
     matches = soup.find_all(element)
     for match in matches:
         match.decompose()
+        
+jobs = soup.find("ul", class_="zVzmE")
+jobs_boxes = jobs.find_all('li')
+
+for job in jobs:
+    company = job.find("p", class_="cQyvth").text
+    title = job.find("h2", class_="XNNQK").text
+    span_elements = job.find_all("span", class_="cezNaf")
+    print(span_elements)
+    location = span_elements[0].text if len(span_elements) > 0 else ""
+    work_modality = span_elements[1].text if len(span_elements) > 1 else ""
+    job_type = span_elements[2].text if len(span_elements) > 2 else ""
+    pcd_status = span_elements[2].text if len(span_elements) > 2 else ""
+    date = job.find("p", class_="inqtnx").text
+    
+    
