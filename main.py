@@ -31,3 +31,9 @@ for element in strong_elements:
             browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
             time.sleep(1)  
             
+elements_to_remove = ['img', 'svg']
+
+for element in elements_to_remove:
+    matches = soup.find_all(element)
+    for match in matches:
+        match.decompose()
