@@ -1,4 +1,4 @@
-import requests, time, csv, re
+import time, csv, re
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
