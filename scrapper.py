@@ -40,7 +40,8 @@ for word in words:
         matches = soup.find_all(element)
         for match in matches:
             match.decompose()
-    
+    html_content = browser.page_source
+    soup = BeautifulSoup(html_content, 'html.parser')
     # Encontrando as informações dos trabalhos
     jobs = soup.find("ul", class_="zVzmE")
     # A gupo cria lista unica para cada vaga
