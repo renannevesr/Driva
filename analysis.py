@@ -13,7 +13,14 @@ work_modalities = df['Work Modality'].value_counts().to_dict()
 work_modalities_percentages = {key: value / total_jobs * 100 for key, value in work_modalities.items()}
 
 job_types = df['Job Type'].value_counts().to_dict()
+
+# Calcula as porcentagens dos tipos de trabalho
+job_types_percentages = {key: value / total_jobs * 100 for key, value in job_types.items()}
+
 locations = df['Location'].value_counts().to_dict()
+
+# Calcula as porcentagens das localizações
+locations_percentages = {key: value / total_jobs * 100 for key, value in locations.items()}
 
 # Extrai uma lista única de empresas
 companies = df['Company'].unique().tolist()
@@ -33,13 +40,15 @@ for word_type in word_types:
     filtered_df = df[df['Word'] == word_type]
     word_counts[word_type] = len(filtered_df)
 
-# Cria um dicionário com todas as análises realizadas, incluindo as porcentagens das modalidades de trabalho
+# Cria um dicionário com todas as análises realizadas, incluindo as porcentagens das modalidades de trabalho, tipos de trabalho e localizações
 analysis = {
     "total_jobs": total_jobs,
     "work_modalities": work_modalities,
     "work_modalities_percentages": work_modalities_percentages,
     "job_types": job_types,
+    "job_types_percentages": job_types_percentages,
     "locations": locations,
+    "locations_percentages": locations_percentages,
     "companies": companies,
     "words": words,
     "pcd_statuses": pcd_statuses,
