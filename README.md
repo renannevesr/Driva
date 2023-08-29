@@ -52,10 +52,7 @@ Foram coletadas um total de 190 vagas de emprego.
 
 ### Localizações
 - A cidade "São Paulo - SP" continua sendo a líder em número de vagas, com 25.79%.
-- "Não informado" e outras cidades como "Curitiba - PR" e "Porto Alegre - RS" também têm presença significativa.
-
-### Empresas
-O JSON inclui uma lista de várias empresas que estão oferecendo essas vagas de emprego.
+- Outras cidades como "Curitiba - PR" e "Porto Alegre - RS" também têm presença significativa.
 
 ### Palavras-chave
 - A palavra-chave "estagio" é a mais comum, presente em 60 vagas de emprego.
